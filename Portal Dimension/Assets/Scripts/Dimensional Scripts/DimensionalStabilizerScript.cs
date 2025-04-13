@@ -4,33 +4,81 @@ using UnityEngine;
 
 public class DimensionalStabilizerScript : MonoBehaviour
 {
-    [SerializeField] GameObject player;
-    [SerializeField] GameObject[] AlternateModels;
-    GameObject playerCamera;
+    public int activePlayer;
+    public GameObject[] AllPlayers;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        playerCamera = player.transform.GetChild(0).gameObject;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        AlternateModels[0].transform.position = player.transform.position + new Vector3(0,0,-50.0f);
-        AlternateModels[1].transform.position = player.transform.position + new Vector3(-50.0f,0,-50.0f);
-        AlternateModels[2].transform.position = player.transform.position + new Vector3(-50.0f, 0,0);
+        //AllPlayers[0].transform.position = player.transform.position + new Vector3(0,0,-50.0f);
+        //AllPlayers[1].transform.position = player.transform.position + new Vector3(-50.0f,0,-50.0f);
+        //AllPlayers[2].transform.position = player.transform.position + new Vector3(-50.0f, 0,0);
 
-        for (int i = 0; i < AlternateModels.Length; i++)
+
+
+
+
+        switch (activePlayer)
         {
-            AlternateModels[i].transform.rotation = player.transform.rotation;
+            case 0:
+                AllPlayers[1].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(0, 0, -50.0f);
+                AllPlayers[2].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(-50.0f,0,-50.0f);
+                AllPlayers[3].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(-50.0f, 0,0);
+                break;
+            case 1:
+                AllPlayers[0].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(0, 0, 50.0f);
+                AllPlayers[2].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(-50.0f, 0, 0);
+                AllPlayers[3].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(-50.0f, 0, 50.0f);
+                break;
+            case 2:
+                AllPlayers[0].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(50.0f, 0, 50.0f);
+                AllPlayers[1].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(50.0f, 0, 0);
+                AllPlayers[3].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(0, 0, 50.0f);
+                break;
+            case 3:
+                AllPlayers[0].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(50.0f, 0, 0);
+                AllPlayers[1].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(50.0f, 0, -50.0f);
+                AllPlayers[2].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(0, 0, -50.0f);
+                break;
         }
 
-        for (int i = 0; i < AlternateModels.Length; i++)
+        for (int i = 0; i < AllPlayers.Length; i++)
         {
-            GameObject altCamera = AlternateModels[i].transform.GetChild(0).gameObject;
-            altCamera.transform.rotation = playerCamera.transform.rotation;
+            if (i != activePlayer)
+            {
+                AllPlayers[i].transform.rotation = AllPlayers[activePlayer].transform.rotation;
+            }
         }
 
+        for (int i = 0; i < AllPlayers.Length; i++)
+        {
+            if (i != activePlayer)
+            {
+                GameObject altCamera = AllPlayers[i].transform.GetChild(0).gameObject;
+                GameObject playerCamera = AllPlayers[activePlayer].transform.GetChild(0).gameObject;
+                altCamera.transform.rotation = playerCamera.transform.rotation;
+            }
+        }
+
+    }
+
+    public void IncrementActivePlayer()
+    {
+        
+        if (activePlayer == 3)
+        {
+            activePlayer = 0;
+        }
+        else
+        {
+            activePlayer += 1;
+        }
     }
 }

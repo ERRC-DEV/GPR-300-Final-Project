@@ -9,19 +9,19 @@ public class First_Person_Movement : MonoBehaviour
     private float xRotation;
 
     [Header("Components Needed")]
-    [SerializeField] private Transform PlayerCamera;
-    [SerializeField] private CharacterController Controller;
-    [SerializeField] private Transform Player;
+    [SerializeField] public Transform PlayerCamera;
+    [SerializeField] public CharacterController Controller;
+    [SerializeField] public Transform Player;
     [Space]
     [Header("Movement")]
-    [SerializeField] private float Speed;
-    [SerializeField] private float JumpForce;
-    [SerializeField] private float Sensetivity;
-    [SerializeField] private float Gravity = 9.81f;
+    [SerializeField] public float Speed;
+    [SerializeField] public float JumpForce;
+    [SerializeField] public float Sensetivity;
+    [SerializeField] public float Gravity = 9.81f;
     [Space]
     [Header("Sneaking")]
-    [SerializeField] private bool Sneak = false;
-    [SerializeField] private float SneakSpeed;
+    [SerializeField] public bool Sneak = false;
+    [SerializeField] public float SneakSpeed;
 
     void Start()
     {

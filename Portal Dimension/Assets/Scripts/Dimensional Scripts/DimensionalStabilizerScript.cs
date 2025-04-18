@@ -17,14 +17,6 @@ public class DimensionalStabilizerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //AllPlayers[0].transform.position = player.transform.position + new Vector3(0,0,-50.0f);
-        //AllPlayers[1].transform.position = player.transform.position + new Vector3(-50.0f,0,-50.0f);
-        //AllPlayers[2].transform.position = player.transform.position + new Vector3(-50.0f, 0,0);
-
-
-
-
-
         switch (activePlayer)
         {
             case 0:
@@ -47,6 +39,11 @@ public class DimensionalStabilizerScript : MonoBehaviour
                 AllPlayers[1].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(50.0f, 0, -50.0f);
                 AllPlayers[2].transform.position = AllPlayers[activePlayer].transform.position + new Vector3(0, 0, -50.0f);
                 break;
+        }
+
+        if (activePlayer == 1)
+        {
+            Debug.Log("Testing");
         }
 
         for (int i = 0; i < AllPlayers.Length; i++)

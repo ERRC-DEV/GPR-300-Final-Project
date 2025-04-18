@@ -3010,6 +3010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74ca25b8c6ba0e4468ac0537bc46adde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xRotation: 0
   PlayerCamera: {fileID: 963194228}
   Controller: {fileID: 1381922990}
   Player: {fileID: 1381922989}

@@ -6,7 +6,7 @@ public class First_Person_Movement : MonoBehaviour
     private Vector3 PlayerMovementInput;
     private Vector2 PlayerMouseInput;
     private bool Sneaking = false;
-    private float xRotation;
+    public float xRotation;
 
     [Header("Components Needed")]
     [SerializeField] public Transform PlayerCamera;

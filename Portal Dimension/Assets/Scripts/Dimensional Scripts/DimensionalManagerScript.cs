@@ -19,14 +19,14 @@ public class DimensionalManagerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             // Swap worlds
-
+            float prevRotation = stabilizerScript.AllPlayers[stabilizerScript.activePlayer].GetComponent<First_Person_Movement>().xRotation;
             stabilizerScript.IncrementActivePlayer();
 
             for (int i = 0; i < stabilizerScript.AllPlayers.Length; i++)
             {
                 if (i == stabilizerScript.activePlayer)
                 {
-                    ActivatePlayer(stabilizerScript.AllPlayers[i]);
+                    ActivatePlayer(stabilizerScript.AllPlayers[i], prevRotation);
                 }
                 else
                 {
@@ -47,7 +47,7 @@ public class DimensionalManagerScript : MonoBehaviour
 
     }
 
-    void ActivatePlayer(GameObject player)
+    void ActivatePlayer(GameObject player, float prevRot)
     {
         player.transform.GetChild(0).gameObject.GetComponent<Camera>().depth = 1;
         First_Person_Movement newControlScript = player.AddComponent<First_Person_Movement>();
@@ -56,6 +56,7 @@ public class DimensionalManagerScript : MonoBehaviour
         newControlScript.PlayerCamera = player.transform.GetChild(0).gameObject.transform;
         newControlScript.Controller = player.GetComponent<CharacterController>();
         newControlScript.Player = player.transform;
+        newControlScript.xRotation = prevRot;
 
         // Config
         newControlScript.Speed = 5.0f;

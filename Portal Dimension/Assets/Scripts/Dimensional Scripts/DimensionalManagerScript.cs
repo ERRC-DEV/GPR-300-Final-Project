@@ -18,7 +18,12 @@ public class DimensionalManagerScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            // Swap worlds
+            TransferPlayer();
+        }
+    }
+
+    void TransferPlayer()
+    {
             float prevRotation = stabilizerScript.AllPlayers[stabilizerScript.activePlayer].GetComponent<First_Person_Movement>().xRotation;
             stabilizerScript.IncrementActivePlayer();
 
@@ -35,10 +40,8 @@ public class DimensionalManagerScript : MonoBehaviour
                         DisablePlayer(stabilizerScript.AllPlayers[i]);
                     }
                 }
-            }    
-        }
+            }
     }
-
     void DisablePlayer(GameObject player)
     {
         player.transform.GetChild(0).gameObject.GetComponent<Camera>().depth = -1;

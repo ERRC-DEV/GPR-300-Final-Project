@@ -21,7 +21,7 @@ public class PortalManager : MonoBehaviour
 
             if (i != 0)
             {
-
+                //cameraMats[i].
             }
         }
     }

@@ -237,7 +237,6 @@ GameObject:
   m_Component:
   - component: {fileID: 21767256}
   - component: {fileID: 21767258}
-  - component: {fileID: 21767257}
   m_Layer: 0
   m_Name: Main Camera World3
   m_TagString: MainCamera
@@ -261,14 +260,6 @@ Transform:
   - {fileID: 1335219838}
   m_Father: {fileID: 909788839}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &21767257
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 21767255}
-  m_Enabled: 1
 --- !u!20 &21767258
 Camera:
   m_ObjectHideFlags: 0
@@ -1600,7 +1591,6 @@ GameObject:
   m_Component:
   - component: {fileID: 668720173}
   - component: {fileID: 668720175}
-  - component: {fileID: 668720174}
   m_Layer: 0
   m_Name: Main Camera World2
   m_TagString: MainCamera
@@ -1624,14 +1614,6 @@ Transform:
   - {fileID: 1604763192}
   m_Father: {fileID: 1826621262}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &668720174
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 668720172}
-  m_Enabled: 1
 --- !u!20 &668720175
 Camera:
   m_ObjectHideFlags: 0
@@ -1787,7 +1769,6 @@ GameObject:
   m_Component:
   - component: {fileID: 707470697}
   - component: {fileID: 707470699}
-  - component: {fileID: 707470698}
   m_Layer: 0
   m_Name: PortalCamera World1
   m_TagString: Untagged
@@ -1810,14 +1791,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 963194228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &707470698
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707470696}
-  m_Enabled: 1
 --- !u!20 &707470699
 Camera:
   m_ObjectHideFlags: 0
@@ -3052,7 +3025,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1335219838}
   - component: {fileID: 1335219840}
-  - component: {fileID: 1335219839}
   m_Layer: 0
   m_Name: PortalCamera World3
   m_TagString: Untagged
@@ -3075,14 +3047,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 21767256}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1335219839
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1335219837}
-  m_Enabled: 1
 --- !u!20 &1335219840
 Camera:
   m_ObjectHideFlags: 0
@@ -3842,7 +3806,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1604763192}
   - component: {fileID: 1604763194}
-  - component: {fileID: 1604763193}
   m_Layer: 0
   m_Name: PortalCamera World2
   m_TagString: Untagged
@@ -3865,14 +3828,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 668720173}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1604763193
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604763191}
-  m_Enabled: 1
 --- !u!20 &1604763194
 Camera:
   m_ObjectHideFlags: 0
@@ -4649,7 +4604,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1767159903}
   - component: {fileID: 1767159905}
-  - component: {fileID: 1767159904}
   m_Layer: 0
   m_Name: Main Camera World4
   m_TagString: MainCamera
@@ -4673,14 +4627,6 @@ Transform:
   - {fileID: 1917891864}
   m_Father: {fileID: 500730554}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1767159904
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767159902}
-  m_Enabled: 1
 --- !u!20 &1767159905
 Camera:
   m_ObjectHideFlags: 0
@@ -5170,7 +5116,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1917891864}
   - component: {fileID: 1917891866}
-  - component: {fileID: 1917891865}
   m_Layer: 0
   m_Name: PortalCamera World4
   m_TagString: Untagged
@@ -5193,14 +5138,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1767159903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1917891865
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1917891863}
-  m_Enabled: 1
 --- !u!20 &1917891866
 Camera:
   m_ObjectHideFlags: 0
@@ -5422,6 +5359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stabilizerScript: {fileID: 1977687044}
+  portalManagerScript: {fileID: 1977687046}
 --- !u!114 &1977687046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5444,6 +5382,11 @@ MonoBehaviour:
   - {fileID: 2100000, guid: d5193cfc315649b4aa96b43750c5a1b5, type: 2}
   - {fileID: 2100000, guid: 3c1a6ef783011df44a4b905f000d739f, type: 2}
   - {fileID: 2100000, guid: b9651ac078e34484f9099207e47dd94b, type: 2}
+  portalPlanes:
+  - {fileID: 1450099162}
+  - {fileID: 639064587}
+  - {fileID: 1754539171}
+  - {fileID: 1774205209}
 --- !u!1 &2110697657
 GameObject:
   m_ObjectHideFlags: 0

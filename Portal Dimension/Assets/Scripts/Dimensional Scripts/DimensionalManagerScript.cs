@@ -6,6 +6,7 @@ using UnityEngine;
 public class DimensionalManagerScript : MonoBehaviour
 {
     [SerializeField] DimensionalStabilizerScript stabilizerScript;
+    [SerializeField] PortalManager portalManagerScript;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,7 @@ public class DimensionalManagerScript : MonoBehaviour
                     }
                 }
             }
+        portalManagerScript.ChangeActivePortal(stabilizerScript.activePlayer);
     }
     void DisablePlayer(GameObject player)
     {

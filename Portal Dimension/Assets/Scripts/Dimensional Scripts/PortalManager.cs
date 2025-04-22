@@ -6,6 +6,7 @@ public class PortalManager : MonoBehaviour
 {
     public Camera[] cameras;
     public Material[] cameraMats;
+    public GameObject[] portalPlanes;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +22,25 @@ public class PortalManager : MonoBehaviour
 
             if (i != 0)
             {
-                //cameraMats[i].
+                //portalPlanes[i].GetComponent<Renderer>().enabled = false;
+                portalPlanes[i].SetActive(false);
             }
         }
     }
 
-    void ChangeActivePortal()
+    public void ChangeActivePortal(int activePortal)
     {
-
+        //Debug.Log("Code gets called");
+        for (int i = 0; i < 4; i++)
+        {
+            if (i == activePortal)
+            {
+                portalPlanes[i].SetActive(true);
+            }
+            else
+            {
+                portalPlanes[i].SetActive(false);
+            }
+        }
     }
 }

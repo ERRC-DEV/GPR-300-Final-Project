@@ -41,11 +41,6 @@ public class DimensionalStabilizerScript : MonoBehaviour
                 break;
         }
 
-        if (activePlayer == 1)
-        {
-            Debug.Log("Testing");
-        }
-
         for (int i = 0; i < AllPlayers.Length; i++)
         {
             if (i != activePlayer)

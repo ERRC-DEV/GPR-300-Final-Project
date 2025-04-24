@@ -23,7 +23,7 @@ public class DimensionalManagerScript : MonoBehaviour
         }
     }
 
-    void TransferPlayer()
+    public void TransferPlayer()
     {
             float prevRotation = stabilizerScript.AllPlayers[stabilizerScript.activePlayer].GetComponent<First_Person_Movement>().xRotation;
             stabilizerScript.IncrementActivePlayer();
@@ -42,7 +42,6 @@ public class DimensionalManagerScript : MonoBehaviour
                     }
                 }
             }
-        portalManagerScript.ChangeActivePortal(stabilizerScript.activePlayer);
     }
     void DisablePlayer(GameObject player)
     {

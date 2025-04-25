@@ -1,5 +1,7 @@
 Shader "Unlit/ScreenCutoutShader"
 {
+	// Shader written by Ethan Chevalier with the aid of a tutorial by Brackeys
+	
 	Properties
 	{
 		_MainTex ("Texture", 2D) = "white" {}

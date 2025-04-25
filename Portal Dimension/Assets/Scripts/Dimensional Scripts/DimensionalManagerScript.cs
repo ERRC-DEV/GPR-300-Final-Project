@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+// Script written by Ethan Chevalier
+
 public class DimensionalManagerScript : MonoBehaviour
 {
     [SerializeField] DimensionalStabilizerScript stabilizerScript;
@@ -17,10 +19,7 @@ public class DimensionalManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TransferPlayer();
-        }
+
     }
 
     public void TransferPlayer()

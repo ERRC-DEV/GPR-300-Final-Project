@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script written by Ethan Chevalier
+
 public class DimensionalStabilizerScript : MonoBehaviour
 {
     public int activePlayer;

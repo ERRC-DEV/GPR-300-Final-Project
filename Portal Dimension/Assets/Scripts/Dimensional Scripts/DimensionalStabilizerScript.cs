@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script written by Ethan Chevalier
+
 public class DimensionalStabilizerScript : MonoBehaviour
 {
     public int activePlayer;
@@ -17,14 +19,6 @@ public class DimensionalStabilizerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //AllPlayers[0].transform.position = player.transform.position + new Vector3(0,0,-50.0f);
-        //AllPlayers[1].transform.position = player.transform.position + new Vector3(-50.0f,0,-50.0f);
-        //AllPlayers[2].transform.position = player.transform.position + new Vector3(-50.0f, 0,0);
-
-
-
-
-
         switch (activePlayer)
         {
             case 0:

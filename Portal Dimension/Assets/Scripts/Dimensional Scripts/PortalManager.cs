@@ -24,7 +24,6 @@ public class PortalManager : MonoBehaviour
 
             if (i != 0)
             {
-                //portalPlanes[i].GetComponent<Renderer>().enabled = false;
                 portalPlanes[i].SetActive(false);
             }
         }
@@ -32,7 +31,6 @@ public class PortalManager : MonoBehaviour
 
     public void ChangeActivePortal(int activePortal)
     {
-        //Debug.Log("Code gets called");
         for (int i = 0; i < 4; i++)
         {
             if (i == activePortal)

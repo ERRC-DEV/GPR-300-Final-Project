@@ -9,8 +9,6 @@ public class PortalManager : MonoBehaviour
     public Camera[] cameras;
     public Material[] cameraMats;
     public GameObject[] portalPlanes;
-    public GameObject[] portalBacks;
-    public GameObject[] portalBackMasks;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +25,6 @@ public class PortalManager : MonoBehaviour
             if (i != 0)
             {
                 portalPlanes[i].SetActive(false);
-                portalBacks[i].SetActive(false);
-                portalBackMasks[i].SetActive(false);
             }
         }
     }
@@ -40,14 +36,10 @@ public class PortalManager : MonoBehaviour
             if (i == activePortal)
             {
                 portalPlanes[i].SetActive(true);
-                portalBacks[i].SetActive(true);
-                portalBackMasks[i].SetActive(true);
             }
             else
             {
                 portalPlanes[i].SetActive(false);
-                portalBacks[i].SetActive(false);
-                portalBackMasks[i].SetActive(false);
             }
         }
     }
